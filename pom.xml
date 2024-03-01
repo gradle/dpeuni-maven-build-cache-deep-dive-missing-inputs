@@ -63,5 +63,32 @@
       </configuration>
     </plugin>
   </plugins>
+  <pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>com.gradle</groupId>
+        <artifactId>develocity-maven-extension</artifactId>
+        <configuration>
+          <develocity>
+            <plugins>
+              <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <inputs>
+                  <fileSets>
+                    <fileSet>
+                      <name>test-data</name>
+                      <paths>
+                        <path>src/integration-test-samples</path>
+                      </paths>
+                    </fileSet>
+                  </fileSets>
+                </inputs>
+              </plugin>
+            </plugins>
+          </develocity>
+        </configuration>
+      </plugin>
+    </plugins>
+  </pluginManagement>
 </build>
 </project>
